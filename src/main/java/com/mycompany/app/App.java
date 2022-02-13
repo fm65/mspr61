@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class App
+public class App extends Exception
 {
     public App() {}
 

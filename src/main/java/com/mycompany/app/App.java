@@ -4,14 +4,13 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class App extends Exception
+public class App
 {
     public App() {}
 
     public static void main(String[] args) {
-        String password = "";
         BufferedReader br = null;
-        ArrayList<String> staffList = new ArrayList<String>();
+        ArrayList<String> staffList = new ArrayList<>();
         String filePath = new File("").getAbsolutePath();
         File staff = new File(filePath.concat("/src/main/files/staff.txt"));
         try {
@@ -107,9 +106,6 @@ public class App extends Exception
         try {
             indexWriter = new PrintWriter("index.html");
             indexWriter.write(indexOutput);
-        } catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
-            e.printStackTrace();
         } catch (IOException e) {
             System.out.println(e.getMessage());
             e.printStackTrace();
@@ -180,10 +176,9 @@ public class App extends Exception
                     }
                 }
             } catch (FileNotFoundException e) {
-                System.out.println("Le fichier n\'a pas été trouvé, le chemin saisi est-il correct ? " + e.getMessage());
+                System.out.println("Le fichier n'a pas été trouvé, le chemin saisi est-il correct ? " + e.getMessage());
                 e.printStackTrace();
             } catch (IOException e) {
-                // TODO : gérer le cas du br.ready() et du br.readline()
                 System.out.println("Problème pour lire le chemin saisi" + e.getMessage());
                 e.printStackTrace();
             } finally {
@@ -210,9 +205,6 @@ public class App extends Exception
             try {
                 agentWriter = new PrintWriter(agent + ".html");
                 agentWriter.write(agentOutput);
-            } catch (FileNotFoundException e) {
-                System.out.println(e.getMessage());
-                e.printStackTrace();
             } catch (IOException e) {
                 System.out.println(e.getMessage());
                 e.printStackTrace();

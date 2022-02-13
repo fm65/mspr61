@@ -148,7 +148,7 @@ public class App
             agentOutput += """
                          <body>
                              <span>
-                                 <a href="index.html"><img title="Accueil" src="src/main/images/logo.PNG"></a>
+                                 <a href="index.html"><img title="Accueil" src="/images/logo.PNG"></a>
                              </span>
                         """;
 
@@ -195,7 +195,7 @@ public class App
             agentOutput += """
                             </ul></div>
                             """;
-            agentOutput += "<img id=\"idCard\" src=\"src/main/images/" + agent + ".jpg\"></div>\n";
+            agentOutput += "<img id=\"idCard\" src=\"/images/" + agent + ".jpg\"></div>\n";
             agentOutput += """
                         </body>
                         </html>

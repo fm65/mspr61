@@ -49,11 +49,11 @@ public class App
                          <style>
                             @font-face {
                                 font-family: "light";
-                                src: url("src/main/font/Roboto-Light.ttf");
+                                src: url("./font/Roboto-Light.ttf");
                             }
                             @font-face {
                                 font-family: "medium";
-                                src: url("src/main/font/Roboto-Medium.ttf");
+                                src: url("./font/Roboto-Medium.ttf");
                             }
                             body { font-family: "light"; }
                             ul { list-style:none; }
@@ -88,7 +88,7 @@ public class App
         indexOutput += """
                             <body>
                                 <span>
-                                    <img src="src/main/images/logo.PNG">
+                                    <img src="./images/logo.PNG">
                                 </span>
                                 <ul>
                            """;
@@ -127,11 +127,11 @@ public class App
                                <style>
                                    @font-face {
                                        font-family: "light";
-                                       src: url("src/main/font/Roboto-Light.ttf");
+                                       src: url("./font/Roboto-Light.ttf");
                                    }
                                    @font-face {
                                        font-family: "medium";
-                                       src: url("src/main/font/Roboto-Medium.ttf");
+                                       src: url("./font/Roboto-Medium.ttf");
                                    }
                                    body { font-family: "light"; padding-left: 2em; padding-right: 2em; }
                                    h1 { font-family: "medium"; color: #379EC1; border: 0.3em solid #659224; padding : 0.5em; }

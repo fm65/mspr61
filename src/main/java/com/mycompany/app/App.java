@@ -3,15 +3,12 @@ package com.mycompany.app;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
 
 public class App
 {
     public App() {}
 
-    public static Map<String, String> main(String[] args) {
-        Map<String, String> acces = new HashMap<String, String>();
+    public static void main(String[] args) {
         BufferedReader br = null;
         ArrayList<String> staffList = new ArrayList<>();
         String filePath = new File("").getAbsolutePath();
@@ -153,8 +150,6 @@ public class App
                                  <a href="index.html"><img title="Accueil" src="./images/logo.PNG"></a>
                              </span>
                         """;
-
-
             try {
                 ArrayList<String> agentArray = new ArrayList<>();
                 File agentList = new File(filePath.concat("/src/main/files/" + agent + ".txt"));
@@ -162,6 +157,7 @@ public class App
                 while (br2.ready()) {
                     agentArray.add(br2.readLine());
                 }
+
                 agentOutput += "<div id =\"row\"><div id =\"column\"><h1>" + agentArray.get(1) + " " + agentArray.get(0) + "</h1>\n";
                 agentOutput += "<ul>\n";
                 br2.close();
@@ -175,7 +171,6 @@ public class App
                         if (agentLine.equals(str[0])) {
                             agentOutput += "<li><input type=\"checkbox\" checked disabled>" + str[1].trim() + "</li>";
                         }
-                        acces.put(agent, agentArray.get(3));
                     }
                 }
             } catch (FileNotFoundException e) {
@@ -214,8 +209,8 @@ public class App
             } finally {
                 agentWriter.flush();
                 agentWriter.close();
+
             }
         }
-        return acces;
     }
 }

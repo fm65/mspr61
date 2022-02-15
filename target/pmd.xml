@@ -2,7 +2,7 @@
 <pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
-    version="6.8.0" timestamp="2022-02-15T10:07:49.323">
+    version="6.8.0" timestamp="2022-02-15T10:11:22.252">
 <error filename="C:\Users\maxju\IdeaProjects\mspr61\src\main\java\com\mycompany\app\App.java" msg="Error while processing C:\Users\maxju\IdeaProjects\mspr61\src\main\java\com\mycompany\app\App.java">
 <![CDATA[net.sourceforge.pmd.PMDException: Error while processing C:\Users\maxju\IdeaProjects\mspr61\src\main\java\com\mycompany\app\App.java
 	at net.sourceforge.pmd.SourceCodeProcessor.processSourceCode(SourceCodeProcessor.java:102)

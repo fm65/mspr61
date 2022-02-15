@@ -3,12 +3,15 @@ package com.mycompany.app;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 
 public class App
 {
     public App() {}
 
-    public static void main(String[] args) {
+    public static Map<String, String> main(String[] args) {
+        Map<String, String> acces = new HashMap<String, String>();
         BufferedReader br = null;
         ArrayList<String> staffList = new ArrayList<>();
         String filePath = new File("").getAbsolutePath();
@@ -24,7 +27,6 @@ public class App
             System.out.println("Le fichier n'a pas été trouvé, le chemin saisi est-il correct ? " + e.getMessage());
             e.printStackTrace();
         } catch (IOException e) {
-            // TODO : gérer le cas du br.ready() et du br.readline()
             System.out.println("Problème pour lire le chemin saisi" + e.getMessage());
             e.printStackTrace();
         } finally {
@@ -173,6 +175,7 @@ public class App
                         if (agentLine.equals(str[0])) {
                             agentOutput += "<li><input type=\"checkbox\" checked disabled>" + str[1].trim() + "</li>";
                         }
+                        acces.put(agent, agentArray.get(3));
                     }
                 }
             } catch (FileNotFoundException e) {
@@ -213,5 +216,6 @@ public class App
                 agentWriter.close();
             }
         }
+        return acces;
     }
 }
